@@ -1,0 +1,38 @@
+.login_card{
+background: #fbfbfb;
+  border-radius: 8px;
+  box-shadow: 1px 2px 8px rgba(0, 0, 0, 0.65);
+  height: 520px;
+  margin: 11rem auto 8.1rem auto;
+  width: 580px;
+}
+
+.login_form {
+  
+    display: flex;
+   margin: 12rem;
+}
+
+.login_form_content {
+  
+    padding-top: 14px;
+}
+.login_form_title {
+    display: block;
+    text-align: center;
+}
+.login_form_border{
+    background: -webkit-linear-gradient(right, #a6f77b, #2ec06f);
+    height: 1px;
+    width: 100%;
+}
+
+.errors {
+    color: red;
+}
+.login_button{
+    margin-top: 10px;
+    align-items: center;
+    display: flex;
+    justify-content: center;
+}

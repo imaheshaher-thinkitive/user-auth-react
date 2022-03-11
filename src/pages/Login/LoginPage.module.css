@@ -1,0 +1,14 @@
+.login_container {
+  
+}
+
+.bg_image {
+    /* Control the height of the image */
+    background-image: url("login-page.png");
+    min-height: 980px;
+  /* Center and scale the image nicely */
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  position: relative;
+}
