@@ -1,4 +1,4 @@
-.custom_button {
+.enable_button {
   background-color: #4CAF50; /* Green */
   border: none;
   color: white;
@@ -7,10 +7,16 @@
   text-decoration: none;
   display: inline-block;
   font-size: 16px;
+  cursor: pointer;
+
 }
 
-.custom_button:hover{
+.enable_button:hover{
    
         box-shadow: 0 12px 16px 0 rgba(0,0,0,0.24), 0 17px 50px 0 rgba(0,0,0,0.19);
-    
+        
+}
+.disable_button {
+  opacity: 0.2;
+  cursor: not-allowed;
 }

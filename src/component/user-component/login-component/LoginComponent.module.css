@@ -36,3 +36,7 @@ background: #fbfbfb;
     display: flex;
     justify-content: center;
 }
+.login_form_title_div{
+    position: relative;
+    top: 70px;
+}

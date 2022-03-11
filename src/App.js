@@ -10,20 +10,18 @@ import HomePage from './pages/HomePage';
 import LoginPage from './pages/Login/LoginPage';
 import SignupPage from './pages/SignupPage';
 import { getLocalStorage } from './lib/custom-hook/helper/localStorage';
-import useToken from './lib/custom-hook/helper/userAuth';
-import { useEffect, useState } from 'react';
+
 import 'react-toastify/dist/ReactToastify.css';
+import { ToastContainer } from 'react-toastify';
+import 'bootstrap/dist/css/bootstrap.min.css';
+import Header from './component/header/Header';
+
 function App() {
-  const [token,setToken] = useState(sessionStorage.getItem("token"))
-  useEffect(() => {
-    
-    if(!token){
-    
-      // history.push("/login")
-    }
-  }, [])
+
   return (
-   <BrowserRouter>
+    <BrowserRouter>
+     <Header />
+
    <Routes>
    <Route
         path="/"
@@ -41,8 +39,9 @@ function App() {
      <Route path='/signup'element={<SignupPage />} />
      
    </Routes>
-
+      <ToastContainer />
    </BrowserRouter>
+   
   );
 }
 function RequireAuth({ children, redirectTo }) {

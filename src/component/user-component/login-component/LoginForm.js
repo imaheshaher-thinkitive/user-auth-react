@@ -37,7 +37,7 @@ class LoginForm extends Component {
         break;
       case "password":
         errors.password =
-          value.length < 8 ? "Password must be 8 characters long!" : "";
+          value.length < 6 ? "Password must be 6 characters long!" : "";
         break;
       default:
         break;
@@ -78,7 +78,6 @@ class LoginForm extends Component {
         className={`${style.login_form_content}`}
         onSubmit={this.handleOnLogin}
       >
-        <ToastContainer />
         <div>
           <label>Email</label>
           <input
@@ -100,6 +99,9 @@ class LoginForm extends Component {
             name="password"
             onChange={this.handleChange}
           />
+            {errors.password.length > 0 && (
+            <span className={style.errors}>{errors.password}</span>
+          )}
         </div>
 
         <div className={style.login_button}>

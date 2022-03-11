@@ -10,7 +10,7 @@ function HomePage() {
   return (
     <div>
         HomePage
-        <button onClick={handleOnLogout}>Log out</button>
+        <button className='btn btn-danger' onClick={handleOnLogout}>Log out</button>
     </div>
   )
 }
