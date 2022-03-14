@@ -39,7 +39,7 @@ const ProfilePopup = () => {
   
    return(
     <div>
-    <button className={`btn btn-primary mt-1 ${style.profile_popup}` } onClick={onOpenModal}>Open modal</button>
+    <button className={`btn btn-primary mt-1 ${style.profile_popup}` } onClick={onOpenModal}>Profile</button>
     <Modal open={open} onClose={onCloseModal} center>
     <ProfilePopupContainer userData={userData} isUpdate={isUpdate} />
     <div className={style.profile_update_button}>
