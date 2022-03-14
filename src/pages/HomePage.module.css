@@ -1,0 +1,16 @@
+.home_page {
+    display: flex;
+    justify-content: space-between;
+    
+}
+.home_page_title {
+    font-size: 20px;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+.home_page_header{
+    display: flex;
+    justify-content: space-between;
+}
+.home_page_name {
+    /* text-align: center;    */
+}

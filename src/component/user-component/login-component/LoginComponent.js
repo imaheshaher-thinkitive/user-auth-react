@@ -1,4 +1,5 @@
 import React from "react";
+import { Link } from "react-router-dom";
 import style from "./LoginComponent.module.css";
 import LoginForm from "./LoginForm";
 import LoginFormFunctional from "./LoginFormFunctional";
@@ -11,6 +12,9 @@ function LoginComponent() {
       <div className={`${style.login_form}`}>
           {/* <LoginForm /> */}
           <LoginFormFunctional />
+      </div>
+      <div>
+        
       </div>
     </div>
   );

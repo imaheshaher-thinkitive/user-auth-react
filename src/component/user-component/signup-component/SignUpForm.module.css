@@ -1,0 +1,19 @@
+.signup_form {
+  padding: 2px  ;
+}
+.signup_lable {
+    text-align: center;
+}
+.singup_form_group {
+    padding: 4px;
+}
+
+.singup_form_group > p {
+    color: red;
+    margin-bottom: 5px;
+}
+.signup_button{
+    text-align: center;
+    align-items: center;
+    padding: 4px;
+}

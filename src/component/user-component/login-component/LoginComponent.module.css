@@ -40,3 +40,7 @@ background: #fbfbfb;
     position: relative;
     top: 70px;
 }
+.signup_link{
+    text-align: center;
+    margin-top: 10px;
+}

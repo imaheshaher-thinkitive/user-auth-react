@@ -1,0 +1,37 @@
+.signup_card{
+    background: #fbfbfb;
+      border-radius: 8px;
+      box-shadow: 1px 2px 8px rgba(0, 0, 0, 0.65);
+      
+      margin: 11rem auto 8.1rem auto;
+/*     
+    display: flex;
+    justify-content: center;
+    align-items: center; */
+    }
+
+
+    .signup_card  {
+    position: relative;
+    height: 100%;
+    width: 30rem;
+    -webkit-transform-style: preserve-3d;
+    transform-style: preserve-3d;
+    -webkit-transition: all 600ms;
+    transition: all 600ms;
+    z-index: 20;
+    display: flex;
+    flex-direction:column;
+    align-items:center;
+    justify-content:center;	
+    border: 1px;
+    padding: 20px;
+    
+    }
+    
+
+@media screen and(max-width:400px){
+    .signup_card{
+        width: 18rem;
+    }
+}

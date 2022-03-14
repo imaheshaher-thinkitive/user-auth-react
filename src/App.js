@@ -8,7 +8,7 @@ import {
 } from "react-router-dom";
 import HomePage from './pages/HomePage';
 import LoginPage from './pages/Login/LoginPage';
-import SignupPage from './pages/SignupPage';
+import SignupPage from './pages/SignUp/SignupPage';
 import { getLocalStorage } from './lib/custom-hook/helper/localStorage';
 
 import 'react-toastify/dist/ReactToastify.css';

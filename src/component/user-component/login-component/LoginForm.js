@@ -13,7 +13,7 @@ class LoginForm extends Component {
     this.state = {
       email: "",
       password: "",
-
+      is_disable:true,
       errors: {
         email: "",
         password: "",
@@ -40,6 +40,7 @@ class LoginForm extends Component {
           value.length < 6 ? "Password must be 6 characters long!" : "";
         break;
       default:
+        
         break;
     }
 
