@@ -7,8 +7,13 @@ const signUpUser = (data) => {
     return http.post("/api/signup",data)
 }
 
+const profileDetail = (headers) =>{
+    return http.get("/api/profile",{headers})
+}
+
 const services ={
     loginUser,
-    signUpUser
+    signUpUser,
+    profileDetail   
 }
 export default services

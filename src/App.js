@@ -15,6 +15,7 @@ import 'react-toastify/dist/ReactToastify.css';
 import { ToastContainer } from 'react-toastify';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import Header from './component/header/Header';
+import ProfilePage from './pages/ProfilePage';
 
 function App() {
 
@@ -32,11 +33,22 @@ function App() {
           </RequireAuth>
         }
       />
+
+     <Route path='/profile' 
+      element={
+        <RequireAuth redirectTo="/login">
+          <ProfilePage />
+        </RequireAuth>
+      }
+     />
      <Route path='/login' element={
      <IfAuthenticated>
        <LoginPage />
      </IfAuthenticated> }/>
-     <Route path='/signup'element={<SignupPage />} />
+     <Route path='/signup'element={
+     <IfAuthenticated>
+      <SignupPage />
+      </IfAuthenticated>} />
      
    </Routes>
       <ToastContainer />

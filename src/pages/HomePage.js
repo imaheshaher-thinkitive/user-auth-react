@@ -1,5 +1,6 @@
 import React from "react";
 import { useNavigate } from "react-router-dom";
+import ProfilePopup from "../component/user-component/profile-component/ProfilePopup";
 import style from "./HomePage.module.css";
 function HomePage() {
   const navigate = useNavigate();
@@ -13,10 +14,17 @@ function HomePage() {
       <div className={`${style.home_page_header}`}>
         <h3 className={style.home_page_name}>HomePage</h3>
       </div>
-        <div> 
-          <button className={`btn btn-danger mt-0`} onClick={handleOnLogout}>
+        <div className={style.home_page_button}> 
+         <div>
+         <ProfilePopup />
+
+        
+         </div>
+         <div>
+         <button className={`btn btn-danger mt-1`} onClick={handleOnLogout}>
             Log out
           </button>
+          </div>
         </div>
       </div>
    
