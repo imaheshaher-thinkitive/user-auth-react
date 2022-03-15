@@ -5,7 +5,7 @@ import services from '../../../services/service';
 import { toast } from 'react-toastify';
 import { Link, useNavigate } from 'react-router-dom';
 
-function SignUpForm() {
+function SignUpForm(props) {
     const navigate  = useNavigate()
     const {
         register,
@@ -47,7 +47,7 @@ function SignUpForm() {
   return (
     
             <form className={style.signup_form} onSubmit={handleSubmit(onSubmit)}>
-                <h3 className={style.signup_lable}>Sign Up</h3>
+                <h3 className={style.signup_lable}>{props.formName ? props.formName :"SignUp"}</h3>
                
                 <div className={`form-group ${style.singup_form_group}`}>
                     <label>Email address</label>

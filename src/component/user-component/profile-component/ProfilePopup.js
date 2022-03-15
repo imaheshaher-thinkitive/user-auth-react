@@ -6,48 +6,42 @@ import "./popup.css"
 import { getLocalStorage } from '../../../lib/custom-hook/helper/localStorage';
 import services from '../../../services/service';
 import ProfilePopupContainer from './ProfilePopupContainer';
+import UpdateProfile from './UpdateProfile';
+import loadProfile from '../../../lib/custom-hook/helper/loadToken';
 
-const loadProfile = () => {
-    const token = getLocalStorage("token")
-    const headers = {
-        Authorization:`bearer ${token}`
-    }
-    return headers
-}
+
 const ProfilePopup = () => {
     const [userData,setUserData] = useState({
      
     })
-    const [isLoad,setIsLoad]=useState(false)
+    const getProfileDetail = () => {
+      services.profileDetail(loadProfile()).then((response) =>{
+        const user = response.data.data
+        setUserData((prevState) => {
+          return {
+              ...prevState,user:user
+          }
+          
+      })
+       
+    })
+    }
     const [open, setOpen] = useState(false);
-    const [isUpdate,setIsUpdate] = useState(false)
   const onOpenModal = () =>{ 
     setOpen(true)
-
-      services.profileDetail(loadProfile()).then((response) =>{
-          const user = response.data.data
-          setUserData((prevState) => {
-            return {
-                ...prevState,user:user
-            }
-            
-        })
-         setIsLoad(true)
-      })
+    getProfileDetail()
+     
     };
   const onCloseModal = () => setOpen(false);
-  
+
+
    return(
     <div>
     <button className={`btn btn-primary mt-1 ${style.profile_popup}` } onClick={onOpenModal}>Profile</button>
     <Modal open={open} onClose={onCloseModal} center>
-    <ProfilePopupContainer userData={userData} isUpdate={isUpdate} />
+    <ProfilePopupContainer userData={userData}/>
     <div className={style.profile_update_button}>
-    <button className={`btn btn-success`} 
-    onClick={()=>setIsUpdate(!isUpdate)}
-    >
-        {!isUpdate ? "Update": "Save Changes"}
-    </button>
+      <UpdateProfile getProfileDetail = {getProfileDetail}/>
     </div>
     </Modal>
   </div>

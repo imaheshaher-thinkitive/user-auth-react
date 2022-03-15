@@ -11,9 +11,14 @@ const profileDetail = (headers) =>{
     return http.get("/api/profile",{headers})
 }
 
+// update image
+const updateProfileImage = (data,headers) => {
+    return http.patch("/api/profile/update/image",data,{headers})
+}
 const services ={
     loginUser,
     signUpUser,
-    profileDetail   
+    profileDetail,
+    updateProfileImage  
 }
 export default services

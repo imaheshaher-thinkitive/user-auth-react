@@ -1,0 +1,10 @@
+.update_profile {
+ padding: 2px;      
+}
+.update_profile_form_group{
+    padding: 4px;
+}
+.update_button {
+    display: flex;
+    justify-content: right;
+}
