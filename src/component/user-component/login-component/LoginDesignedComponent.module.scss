@@ -1,0 +1,133 @@
+
+$primary: #11998e;
+$secondary: #38ef7d;
+$white: #fff;
+$gray: #9b9b9b;
+.login_card_container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 4px;
+}
+
+.login_card {
+    // height: 400px;
+    // width: 400px;
+    /* border: 2px sol; */
+    border-radius: 8px;
+    box-shadow: 1px 2px 8px rgba(0, 0, 0, 0.65);
+    padding: 10px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    
+   
+}
+.login_header {
+  text-align: center;
+  font-weight: 300;
+  color: #2aa58f;
+
+}
+.login_form {
+    display: flex;
+    margin: auto;
+    padding: 4px;
+    flex-direction: column;
+    
+}
+
+.form__field {
+  margin-bottom: 16px;
+
+    font-family: inherit;
+    width: 100%;
+    border: 0;
+    border-bottom: 2px solid $gray;
+    outline: 0;
+    font-size: 1.3rem;
+    color: black ;
+    padding: 7px 0;
+    background: transparent;
+    transition: border-color 0.2s;
+  
+    &::placeholder {
+      color: transparent;
+    }
+  
+    &:placeholder-shown ~ .form__label {
+      font-size: 1.3rem;
+      cursor: text;
+      top: 20px;
+    }
+  }
+  
+  .form__label {
+    position: absolute;
+    top: 0;
+    display: block;
+    transition: 0.2s;
+    font-size: 1rem;
+    color: $gray;
+  }
+  
+  .form__field:focus {
+    ~ .form__label {
+      position: absolute;
+      top: 0;
+      display: block;
+      transition: 0.2s;
+      font-size: 1rem;
+      color: $primary;
+      font-weight:700;    
+    }
+    padding-bottom: 6px;  
+    font-weight: 700;
+    border-width: 3px;
+    border-image: linear-gradient(to right, $primary,$secondary);
+    border-image-slice: 1;
+  }
+  /* reset input */
+  .form__field{
+    &:required,&:invalid { box-shadow:none; }
+  }
+  .input_lable{
+   color: $secondary  ;
+   font-weight: 700;
+   font-size: 1rem;  
+
+  }
+
+  .login_button{
+    color: #ffff;
+    border-radius: 24px;
+
+  }
+  .btn_parent{
+    text-align: center;
+    display: flex;
+    justify-content: space-between;
+    padding-top: 2rem;
+    margin-top: 30px;
+    margin-bottom: 10px;
+    align-items: center;
+  
+    
+  }
+
+  .btn_parent > * {
+    border-radius: 24px;
+    padding-inline: 8px;
+  }
+  
+  .btn {
+    background: red;
+  }
+  
+  .rembere_label{
+    color: black;
+ 
+    font-weight: 900;
+}
+
+  

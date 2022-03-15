@@ -1,5 +1,7 @@
 .login_container {
-  
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 .bg_image {

@@ -1,0 +1,25 @@
+.profile_popup{
+    margin-right: 8px;
+}
+
+
+.modal_container{
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    width: 100%;
+
+    
+}
+
+.modal_container p {
+    font-size: 25px;
+}
+.profile_name{
+    text-align: center;
+}
+
+.profile_update_button{
+    display: flex;
+    justify-content: right;
+}

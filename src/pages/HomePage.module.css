@@ -14,3 +14,12 @@
 .home_page_name {
     /* text-align: center;    */
 }
+.home_page_button{
+    display: flex;
+    justify-content: space-between;
+    margin: 5px;
+    
+}
+.profile_button{
+    margin-right:  8px;
+}
