@@ -43,11 +43,11 @@ const ProfilePopup = () => {
     <Modal open={open} onClose={onCloseModal} center>
     <ProfilePopupContainer userData={userData} isUpdate={isUpdate} />
     <div className={style.profile_update_button}>
-    {/* <button className={`btn btn-success`} 
+    <button className={`btn btn-success`} 
     onClick={()=>setIsUpdate(!isUpdate)}
     >
         {!isUpdate ? "Update": "Save Changes"}
-    </button> */}
+    </button>
     </div>
     </Modal>
   </div>

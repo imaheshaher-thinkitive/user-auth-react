@@ -22,3 +22,27 @@ const add = (a,b) => {
 console.log(parentFun(add)(11,33))
 
 //get/venu/list
+
+/*
+Create signup form UI
+Added signup form validation
+Integrate Signup api
+Create Profile Popup Modal
+Integrate User Profile api
+Over through scss
+Designing Login page 
+*/
+
+//  To desing the login page
+//  Design the Profile update page 
+//  Integrate the profile update api
+//  User image update api
+
+// post http://localhost:5000/info/contact-us/create
+// Content-Type: application-json
+// Authorization: "token" 
+
+// {
+//     type:"General",
+//     details:"something details"
+// }
