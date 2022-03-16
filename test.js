@@ -1,25 +1,25 @@
 // Right HigerOrder Function in JS
 
 
-function parentFun(fn) {
-    return function () {
-        try {
+// function parentFun(fn) {
+//     return function () {
+//         try {
            
-            const returnValuFromOriginal = fn.apply(this, arguments);
-            return returnValuFromOriginal
+//             const returnValuFromOriginal = fn.apply(this, arguments);
+//             return returnValuFromOriginal
             
-        } catch (ex) {
-           throw new Error(ex)
-        }
-    };
-}
+//         } catch (ex) {
+//            throw new Error(ex)
+//         }
+//     };
+// }
 
-const add = (a,b) => {
+// const add = (a,b) => {
 
-    return a+b
-}
+//     return a+b
+// }
 
-console.log(parentFun(add)(11,33))
+// console.log(parentFun(add)(11,33))
 
 //get/venu/list
 
@@ -46,3 +46,23 @@ Designing Login page
 //     type:"General",
 //     details:"something details"
 // }
+
+
+
+function getData() {
+
+    let newArr=[]
+
+   newArr= filterData().then((data) =>{
+       return "data recived"
+    })
+    console.log(newArr.then((d)=>console.log(d)))
+
+     function filterData(){
+
+        return Promise.resolve(["a","b","c"])
+    }
+    return Promise.resolve([newArr])
+}
+
+getData().then(d=>console.log(d))

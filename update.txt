@@ -1,0 +1,6 @@
+Design login page and integrate api
+Create profile image update api using multer
+Create profile image update pop form 
+Integrate profile image update api
+Add the react icons
+Looking for more css
